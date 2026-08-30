@@ -34,3 +34,19 @@ models:
               arguments:
                 to: ref('emp')
                 field: emp_id
+
+      - name: salary
+        data_tests:
+          - is_positive 
+
+      - name: updated_dt
+        data_tests:
+          - Check_dates
+
+      - name: designation
+        data_tests:
+          - no_empty_string    
+
+      - name: email_id 
+        data_tests:
+          - email_check    
