@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: emp
+    columns:
+
+      - name: emp_id
+        data_tests:
+          - not_null
+          - unique
+
+      - name: emp_name
+        data_tests:
+          - not_null
+          - unique
+
+      - name: designation
+        data_tests:
+          - not_null
+
+      - name: department
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['IT', 'Finance', 'HR']
+
+      - name: salary
+        data_tests:
+          - not_null
+
+      - name: manager_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('emp')
+                field: emp_id

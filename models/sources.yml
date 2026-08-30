@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: employee_source
+    database: DBT_LEARNING
+    schema: PUBLIC
+
+    tables:
+      - name: EMPLOYEE
+        identifier: EMP
+      
