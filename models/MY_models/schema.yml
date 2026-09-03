@@ -50,3 +50,7 @@ models:
       - name: email_id 
         data_tests:
           - email_check    
+
+      - name: created_dt
+        data_tests:
+           - create_date   

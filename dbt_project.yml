@@ -40,3 +40,13 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+
+seeds:
+  my_new_project:
+      +schema: stg
+      +database: dbt_learning
+      country_code:
+        +column_types:
+          country_code: varchar
+          country_name: varchar
+

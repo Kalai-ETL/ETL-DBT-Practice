@@ -38,5 +38,5 @@ WITH src AS (
 
 )
 
-SELECT *
+SELECT *,current_timestamp() as created_dt
 FROM src
